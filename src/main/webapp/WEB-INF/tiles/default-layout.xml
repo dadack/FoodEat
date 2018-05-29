@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+ 
+<tiles-definitions>
+	
+	<!-- main layout -->
+	<definition name="main-tiles" template="/WEB-INF/jsp/egovframework/example/main/main-layouts.jsp">
+	  	<put-attribute name="header"    	value="/WEB-INF/jsp/egovframework/example/main/main-header.jsp" />
+		<put-attribute name="headTop"    	value="/WEB-INF/jsp/egovframework/example/main/main-headTop.jsp" />
+	  	<put-attribute name="menu"    		value="/WEB-INF/jsp/egovframework/example/main/main-menu2.jsp" />
+	  	<put-attribute name="subHead"    	value="" />
+	  	<put-attribute name="content"   	value="" />
+	  	<put-attribute name="mobile"		value="/WEB-INF/jsp/egovframework/example/cmmn/default-mobile.jsp" />
+	  	<put-attribute name="newslatter"	value="/WEB-INF/jsp/egovframework/example/cmmn/default-newslatter.jsp" />
+	  	<put-attribute name="footer"    	value="/WEB-INF/jsp/egovframework/example/cmmn/default-footer.jsp" />
+	</definition>
+	
+	<!-- main 만 종속. -->
+	<definition name="*/*.main" extends="main-tiles">
+	  	<put-attribute name="subHead"   value="/WEB-INF/jsp/egovframework/example/{1}/{2}SubHead.jsp" />
+	  	<put-attribute name="content"   value="/WEB-INF/jsp/egovframework/example/{1}/{2}.jsp" />
+	</definition>
+	
+	<!-- store layout -->
+	<definition name="store-tiles" template="/WEB-INF/jsp/egovframework/example/store/store-layouts.jsp">
+	  	<put-attribute name="header"    	value="/WEB-INF/jsp/egovframework/example/main/main-header.jsp" />
+		<put-attribute name="headTop"    	value="/WEB-INF/jsp/egovframework/example/main/main-headTop.jsp" />
+	  	<put-attribute name="menu"    		value="/WEB-INF/jsp/egovframework/example/main/main-menu2.jsp" />
+	  	<put-attribute name="subHead"    	value="" />
+	  	<put-attribute name="content"   	value="" />
+	  	<put-attribute name="mobile"		value="/WEB-INF/jsp/egovframework/example/cmmn/default-mobile.jsp" />
+	  	<put-attribute name="newslatter"	value="/WEB-INF/jsp/egovframework/example/cmmn/default-newslatter.jsp" />
+	  	<put-attribute name="footer"    	value="/WEB-INF/jsp/egovframework/example/cmmn/default-footer.jsp" />
+	</definition>
+	
+	<!-- store 만 종속. -->
+	<definition name="*/*.store" extends="store-tiles">
+	  	<put-attribute name="subHead"   value="/WEB-INF/jsp/egovframework/example/{1}/{2}SubHead.jsp" />
+	  	<put-attribute name="content"   value="/WEB-INF/jsp/egovframework/example/{1}/{2}.jsp" />
+	</definition>
+	
+	
+	<!-- 
+		************************************************************
+								  현재 작업 안함
+		************************************************************
+	 -->
+	<!-- 기본 구성들. -->
+	<definition name="layouts-tiles" template="/WEB-INF/jsp/egovframework/example/cmmn/default-layouts.jsp">
+	  	<put-attribute name="header"    	value="/WEB-INF/jsp/egovframework/example/cmmn/default-header.jsp" />
+	  	<put-attribute name="nav"    		value="/WEB-INF/jsp/egovframework/example/cmmn/default-nav.jsp" />
+	  	<put-attribute name="content"   	value="" />
+	  	<put-attribute name="footer"    	value="/WEB-INF/jsp/egovframework/example/cmmn/default-footer.jsp" />
+	</definition>
+	
+	<!-- main, login, register 제외한 페이지들. -->
+	<definition name="*/*.tiles" extends="layouts-tiles">
+	  	<put-attribute name="content"   value="/WEB-INF/jsp/egovframework/example/{1}/{2}.jsp" />
+	</definition>
+	
+	<definition name="*/*.login" extends="layouts-tiles">
+	  	<put-attribute name="content"   value="/WEB-INF/jsp/egovframework/example/{1}/{2}.jsp" />
+	</definition>
+	
+	<definition name="*/*.register" extends="layouts-tiles">
+	  	<put-attribute name="content"   value="/WEB-INF/jsp/egovframework/example/{1}/{2}.jsp" />
+	</definition>
+	
+</tiles-definitions>

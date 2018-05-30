@@ -4,6 +4,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
 
 <script type="text/javascript">
 
@@ -13,54 +15,38 @@
  */
 </script>
 		 		<div class="container margin_60">
-            <div class="main_title">
-                <h2 class="nomargin_top">베스트 추천 레시피</h2>
-                <p>오늘은 뭐 먹을 까? 고민 말고 이거 먹자!!</p>
+            
+                <!-- <h2 class="nomargin_top">베스트 추천 레시피</h2>
+                <p>오늘은 뭐 먹을 까? 고민 말고 이거 먹자!!</p> -->
+                <h1>베스트</h1>
+                
                 <hr class="divider">
-            </div><!-- End main_title -->
+            <!-- End main_title -->
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="recipes-review">
 						<div class="recipes-img">
-                            <img src="import-image/Top Review/1-350x220.jpg" alt="" />
+                            <img src="import-image/Top Review/2-350x220.jpg" alt="" />
                             <div class="favorite active"><a href="javascript:void(0);"><i class="fa fa-heart"></i></a></div>
                         </div>
 						<div class="recipes-content">
-							<h3><a href="#">건강한 샌드위치 만들기</a></h3>
+							<h3><a href="#">맛있게 먹을 수 있는 볶음국수</a></h3>
                             <div class="ratings">
-                                <ul class="stars">
-                                    <li class="active"><a href="#" class="icon"><i class="fa fa-star"></i></a></li>
-                                    <li class="active"><a href="#" class="icon"><i class="fa fa-star"></i></a></li>
-                                    <li class="active"><a href="#" class="icon"><i class="fa fa-star"></i></a></li>
-                                    <li class="active"><a href="#" class="icon"><i class="fa fa-star"></i></a></li>
-                                    <li class="active"><a href="#" class="icon"><i class="fa fa-star"></i></a></li>
-                                </ul><!-- End stars -->
-                                <span>134</span>
+                                    <div class="float-right"><i class="fas fa-shopping-cart"></i>4000원</div>
                             </div>
                             <div class="col-details">
     							<ul class="details">
                                     <li>
-                                        <img src="import-image/bab.png" class="img-profile" alt="">
+                                        <button type="button" class="btn btn-secondary">장바구니</button>
                                     </li>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
                                     <li>
-                                        <h4>프리티</h4>
-                                        <ul class="favorites">
-                                            <li><i class="fa fa-heart"></i></li>
-                                            <li><span>235</span></li>
-                                        </ul>
-                                        <ul class="comments">
-                                            <li><i class="fa fa-comments"></i></li>
-                                            <li><span>36</span></li>
-                                        </ul>
+                                        <button type="button" class="btn btn-primary">구매하기</button>
                                     </li>
                                 </ul>
-                                <div class="review-final-score">
-                    				<h3>9.9</h3>
-                    				<h4>평점</h4>
-                    			</div>
                             </div>
 						</div>
-                 
+             
 					</div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
